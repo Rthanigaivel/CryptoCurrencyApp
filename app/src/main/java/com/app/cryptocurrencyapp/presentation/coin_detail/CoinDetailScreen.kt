@@ -37,7 +37,11 @@ fun CoinDetailScreen(
     Box(modifier = Modifier.fillMaxSize()) {
         state.coin?.let { coin ->
 
-            LazyColumn(modifier = Modifier.fillMaxSize()) {
+            LazyColumn(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(20.dp)
+            ) {
                 item {
                     Row(
                         modifier = Modifier
@@ -93,7 +97,6 @@ fun CoinDetailScreen(
                             .fillMaxWidth()
                             .padding(10.dp)
                     )
-                    Divider()
                 }
             }
         }

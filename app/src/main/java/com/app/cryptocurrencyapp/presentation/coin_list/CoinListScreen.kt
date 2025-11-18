@@ -26,7 +26,12 @@ fun CoinListScreen(
 ) {
     val state = viewModel.state.value
     Box(modifier = Modifier.fillMaxSize()) {
-        LazyColumn(modifier = Modifier.fillMaxSize()) {
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(20.dp)
+        ) {
+
             items(state.coins) { coin ->
                 CoinListItem(
                     coin = coin,
